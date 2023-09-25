@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Hack</title>
+    <link rel="stylesheet" href="project.css" class="css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url(Dark\ Web\ Hacker\ Blue\ Glow.jpeg);
+            height: 1500px;
+            color: white;
+            font-family: 'Sedgwick Ave Display', cursive;
+        }
+
+        .left {
+            /* border: 3px solid red; */
+            display: inline-block;
+            position: absolute;
+            width: 100px;
+            left: 20px;
+            top: 20px;
+            text-align: center;
+            font-size: 30px;
+            transition: all 2s;
+            animation: anim2 3s infinite;
+        }
+
+        @keyframes anim2 {
+            20% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .left img {
+            filter: invert(100%);
+            height: 100px;
+            width: 100px;
+        }
+
+        .mid {
+            /* border: 3px solid greenyellow; */
+            display: block;
+            margin: 20px auto;
+            width: 850px;
+        }
+
+        .right {
+            /* border: 3px solid blue; */
+            display: inline-block;
+            width: 210px;
+            position: absolute;
+            right: 20px;
+            top: 50px;
+        }
+
+        .navbar {
+
+            display: inline-block;
+        }
+
+        .navbar li {
+            margin: 20px;
+            padding: 10px;
+            font-size: 25px;
+            display: inline-block;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover,
+        a:active {
+            color: aqua;
+            text-decoration: overline;
+        }
+
+        .btn {
+            font-size: 20px;
+            margin: 0px 5px;
+            padding: 5px;
+            font-weight: bold;
+            background-color: hotpink;
+            border: 2px solid greenyellow;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: aqua;
+            background-color: blue;
+            transition: 1s;
+        }
+
+        .container {
+            margin: 40px -30px;
+            width: 400px;
+        }
+
+        .bigcont {
+            /* border: 4px solid red; */
+            width: 350px;
+            height: 300px;
+            display: block;
+            margin-left: 150px;
+            /* background-color: #b6ff1d; */
+        }
+
+        #bigcon {
+            width: 50px;
+            height: 30px;
+            background-color: rgb(13, 13, 14);
+            font-family: Arial, Helvetica, sans-serif;
+            color: red;
+            animation-name: form;
+            animation-duration: 5s;
+            animation-timing-function: ease-out;
+            animation-delay: 0ms;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+            position: relative;
+        }
+
+        @keyframes form {
+
+            0% {
+                top: 40px;
+                left: -40px;
+            }
+
+            25% {
+                top: 330px;
+                left: -40px;
+            }
+
+            50% {
+                top: 330px;
+                left: 330px;
+            }
+
+            75% {
+                top: 40px;
+                left: 330px;
+            }
+
+            100% {
+                top: 40px;
+                left: -40px;
+            }
+        }
+
+        .container form {
+            margin: 50px 50px;
+        }
+
+        .container form input {
+            width: 300px;
+        }
+
+        .container form button {
+            margin-left: 135px;
+        }
+
+        .fixedbutton {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            height: 20px;
+            width: 100px;
+            border: 5px dotted darkorange;
+            font-family: 'Sedgwick Ave Display', cursive;
+            color: black;
+            text-align: center;
+            background-color: #b6ff1d;
+            transition-property: all;
+            transition-duration: 3s;
+            transition-timing-function: ease-out;
+        }
+
+        .fixedbutton:hover {
+            background-color: #c4e284;
+            height: 200px;
+            width: 200px;
+            border: 5px solid rgb(201, 29, 29);
+        }
+
+        #submit {
+            display: flex;
+        }
+
+        #reset {
+            display: flex;
+        }
+
+        .home1 {
+            display: none;
+            position: absolute;
+
+        }
+
+        #drop {
+            display: block;
+        }
+
+        .home:hover .home1 {
+            display: block;
+        }
+
+        #about {
+            display: block;
+        }
+
+        .about1 {
+            display: none;
+            position: absolute;
+        }
+
+        .about:hover .about1 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="hacker logo.jpeg">
+            Let's Hack
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li class="home"><a href="#">Home</a>
+                    <div class="home1">
+                        <div id="drop">google</div>
+                        <div id="drop">youtube</div>
+                        <div id="drop">facebook</div>
+                    </div>
+                </li>
+                <li class="about"><a href="#">About US</a>
+                    <div class="about1">
+                        <div id="about">Phone no</div>
+                        <div id="about">Email</div>
+                        <div id="about">Address</div>
+                    </div>
+                </li>
+                <li><a id="tut" href="#">Tutorials</a></li>
+                <li><a id="mem" href="#">Membership</a></li>
+                <li><a id="login" href="#">Login</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">
+                Call Us
+            </button>
+            <button class="btn">
+                Email Us
+            </button>
+        </div>
+    </header>
+    <div class="bigcont">
+        <div id="bigcon">Let's Hack !
+        </div>
+        <div class="container">
+            <form>
+
+                <input type="text" placeholder="Enter Your Name" name="name1" required><br>
+                <input type="tel" placeholder="Enter Phone No." pattern="[1,9]{2}[0-9]{10}" required><br>
+                <input type="email" name="mail" placeholder="Enter Your Email" required><br>
+                <input type="number" name="age" placeholder="Enter Your Age" required><br>
+                <textarea placeholder="Address" cols="39" rows="5" required></textarea><br>
+                <div>
+                    <button id="submit" type="submit">Submit</button>
+                    <button id="reset" type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="fixedbutton">Chat With Us</div>
+</body>
+
+</html>
